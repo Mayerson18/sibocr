@@ -19,6 +19,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="img/icon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="img/icon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
     <body>
       <div class="banner">
         <div class="space-between pad"><img src="img/logo1.png" alt=""><img src="img/logo2.png" alt=""></div>
@@ -27,12 +28,23 @@
       <div class="post-banner"><strong class="blanco">Viaja</strong> y acompaña nuestra <strong class="blanco">Sele</strong> en <strong class="blanco">Rusia 2018</strong></div>
       <section class="planes gray">
         <div class="columns banner2 pad2">
-          <div class="column">
+          <div class="column is-6">
             <p class="p1 mb">Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum, neque sem pretium metus, quis mollis nisl nunc et massa. Vestibulum sed metus in lorem tristique .</p>
-            <input type="text" placeholder="Cual es tu nombre" class="input"><a class="ver-planes">Ver Planes</a>
+            <div class="owl-carousel carrusel">
+              <div class="item">
+                <input type="text" placeholder="Cual es tu nombre" class="input"><a class="ver-planes click">Ver Planes</a>
+              </div>
+              <div class="item">
+                <input type="email" placeholder="Cual es tu email" class="input"><a class="ver-planes click">Siguiente</a>
+              </div>
+              <div class="item">
+                <input type="number" placeholder="Cual es tu telefono" class="input"><a class="ver-planes click">Enviar</a>
+              </div>
+            </div>
             <div class="info mt">Nam dapibus nisl <a class="blanco">info@sibocr.com</a> Aenean sollicitudin</div>
           </div>
           <div class="column">
+            <div class="vacio"></div>
             <iframe style="width:100%" height="315" src="https://www.youtube.com/embed/XGSy3_Czz8k"></iframe>
           </div>
         </div>
@@ -100,48 +112,42 @@
         <div class="columns pad">
           <div class="column">
             <div class="carta pad">
-              <div class="flex"><img src="img/iglesia.png" alt="" class="img-carta">
-                <div class="titulo-carta">Partido Inagural</div>
+              <div class="flex"><img src="img/iglesia.png" alt="" class="img-carta"/>
+                <div class="titulo-carta">Partido Inaugural</div>
               </div>
-              <p class="p-carta">Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus. Nam tempus vel odio vitae aliquam. </p>
-              <ul>
-                <li><span class="li"></span> &nbsp;&nbsp; Coki 1</li>
-                <li><span class="li"></span> &nbsp;&nbsp; Coki 2</li>
-                <li><span class="li"></span> &nbsp;&nbsp; Coki 3</li>
-                <li><span class="li"></span> &nbsp;&nbsp; Coki 4</li>
-                <li><span class="li"></span> &nbsp;&nbsp; Coki 5</li>
+              <p class="p-carta mb">Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus. Nam tempus vel odio vitae aliquam. </p>
+              <ul class="mb">
+                <li><span class="li"></span> &nbsp;&nbsp; coki1</li>
+                <li><span class="li"></span> &nbsp;&nbsp; coki2</li>
+                <li><span class="li"></span> &nbsp;&nbsp; coki3</li>
               </ul>
               <div class="precios">Ver Precios</div>
             </div>
           </div>
           <div class="column">
             <div class="carta pad">
-              <div class="flex"><img src="img/muneca.png" alt="" class="img-carta">
+              <div class="flex"><img src="img/muneca.png" alt="" class="img-carta"/>
                 <div class="titulo-carta">Semifinales</div>
               </div>
-              <p class="p-carta">Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus. Nam tempus vel odio vitae aliquam. </p>
-              <ul>
-                <li><span class="li"></span> &nbsp;&nbsp; Coki 1</li>
-                <li><span class="li"></span> &nbsp;&nbsp; Coki 2</li>
-                <li><span class="li"></span> &nbsp;&nbsp; Coki 3</li>
-                <li><span class="li"></span> &nbsp;&nbsp; Coki 4</li>
-                <li><span class="li"></span> &nbsp;&nbsp; Coki 5</li>
+              <p class="p-carta mb">Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus. Nam tempus vel odio vitae aliquam. </p>
+              <ul class="mb">
+                <li><span class="li"></span> &nbsp;&nbsp; coki1</li>
+                <li><span class="li"></span> &nbsp;&nbsp; coki2</li>
+                <li><span class="li"></span> &nbsp;&nbsp; coki3</li>
               </ul>
               <div class="precios">Ver Precios</div>
             </div>
           </div>
           <div class="column">
             <div class="carta pad">
-              <div class="flex"><img src="img/torres.png" alt="" class="img-carta">
+              <div class="flex"><img src="img/torres.png" alt="" class="img-carta"/>
                 <div class="titulo-carta">Final</div>
               </div>
-              <p class="p-carta">Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus. Nam tempus vel odio vitae aliquam. </p>
-              <ul>
-                <li><span class="li"></span> &nbsp;&nbsp; Coki 1</li>
-                <li><span class="li"></span> &nbsp;&nbsp; Coki 2</li>
-                <li><span class="li"></span> &nbsp;&nbsp; Coki 3</li>
-                <li><span class="li"></span> &nbsp;&nbsp; Coki 4</li>
-                <li><span class="li"></span> &nbsp;&nbsp; Coki 5</li>
+              <p class="p-carta mb">Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus. Nam tempus vel odio vitae aliquam. </p>
+              <ul class="mb">
+                <li><span class="li"></span> &nbsp;&nbsp; coki1</li>
+                <li><span class="li"></span> &nbsp;&nbsp; coki2</li>
+                <li><span class="li"></span> &nbsp;&nbsp; coki3</li>
               </ul>
               <div class="precios">Ver Precios</div>
             </div>
@@ -168,8 +174,8 @@
           </div>
         </div>
       </footer>
-      <!--include footer.pug.jade-->
       <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
       <script src="js/index.js"></script>
     </body>
   </head>

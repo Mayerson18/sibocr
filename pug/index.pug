@@ -1,14 +1,24 @@
 //output:../public/index.html
 - var p1 = "Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus. Nam tempus vel odio vitae aliquam. "
+-var item1 = {img: "img/iglesia.png", title: "Partido Inaugural", content: ["coki1","coki2","coki3"]}
+-var item2 = {img: "img/muneca.png", title: "Semifinales", content: ["coki1","coki2","coki3"]}
+-var item3 = {img: "img/torres.png", title: "Final", content: ["coki1","coki2","coki3"]}
+-var items = [item1,item2,item3]
 
 mixin article(img,title,content)
-  .column.center
-    img(src=img,class="ours-img")
-    h2.ours-title=title
-    p.ours-content=content
+  .carta.pad
+    .flex
+      img.img-carta(src="#{img}" alt="")
+      .titulo-carta #{title}
+    p.p-carta.mb #{p1}
+    ul.mb
+      each val in content
+        li #[span.li] &nbsp;&nbsp; #{val}
+    .precios Ver Precios
         
         
 include header.pug.jade
+  link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css")
   body
     .banner
       .space-between.pad
@@ -18,12 +28,21 @@ include header.pug.jade
     .post-banner #[strong.blanco Viaja] y acompaña nuestra #[strong.blanco Sele] en #[strong.blanco Rusia 2018]
     section.planes.gray
       .columns.banner2.pad2
-        .column
+        .column.is-6
           p.p1.mb Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum, neque sem pretium metus, quis mollis nisl nunc et massa. Vestibulum sed metus in lorem tristique .
-          input.input(type="text" placeholder="Cual es tu nombre")
-          a.ver-planes Ver Planes
+          .owl-carousel.carrusel
+            .item
+              input.input(type="text" placeholder="Cual es tu nombre")
+              a.ver-planes.click Ver Planes
+            .item
+              input.input(type="email" placeholder="Cual es tu email")
+              a.ver-planes.click Siguiente
+            .item
+              input.input(type="number" placeholder="Cual es tu telefono")
+              a.ver-planes.click Enviar
           .info.mt Nam dapibus nisl #[a.blanco info@sibocr.com] Aenean sollicitudin
         .column
+          .vacio
           iframe(style="width:100%" height="315" src="https://www.youtube.com/embed/XGSy3_Czz8k")
     section.cities.gray
       .columns.pad
@@ -77,64 +96,13 @@ include header.pug.jade
     
     section.cartas.gray.pt3em
       .columns.pad
-        .column
-          .carta.pad
-            .flex
-              img.img-carta(src="img/iglesia.png" alt="")
-              .titulo-carta Partido Inagural
-            p.p-carta #{p1}
-            ul
-              li #[span.li] &nbsp;&nbsp; Coki 1
-              li #[span.li] &nbsp;&nbsp; Coki 2
-              li #[span.li] &nbsp;&nbsp; Coki 3
-              li #[span.li] &nbsp;&nbsp; Coki 4
-              li #[span.li] &nbsp;&nbsp; Coki 5
-            .precios Ver Precios
-        .column
-          .carta.pad
-            .flex
-              img.img-carta(src="img/muneca.png" alt="")
-              .titulo-carta Semifinales
-            p.p-carta #{p1}
-            ul
-              li #[span.li] &nbsp;&nbsp; Coki 1
-              li #[span.li] &nbsp;&nbsp; Coki 2
-              li #[span.li] &nbsp;&nbsp; Coki 3
-              li #[span.li] &nbsp;&nbsp; Coki 4
-              li #[span.li] &nbsp;&nbsp; Coki 5
-            .precios Ver Precios
-        .column
-          .carta.pad
-            .flex
-              img.img-carta(src="img/torres.png" alt="")
-              .titulo-carta Final
-            p.p-carta #{p1}
-            ul
-              li #[span.li] &nbsp;&nbsp; Coki 1
-              li #[span.li] &nbsp;&nbsp; Coki 2
-              li #[span.li] &nbsp;&nbsp; Coki 3
-              li #[span.li] &nbsp;&nbsp; Coki 4
-              li #[span.li] &nbsp;&nbsp; Coki 5
-            .precios Ver Precios
+        each val in items
+          .column
+            +article(val.img,val.title,val.content)
           
-    footer.foot
-      .columns.pad
-        .column
-          h1.mb Preguntas Frecuentes
-          h2.mb ¿Puedo Pagar con Tarjeta de Credito?
-          h2.mb In hac habitasse platea dictumst. Vivamus adipiscing fermentum 
-          h2.mb Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat, no
-          h2.mb dum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis.
-          h2.mb quam volutpat aliquam.n ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit, eu biben
-        .column
-          h3.can.mb ¿Puedo Pagar con Tarjeta de Credito?
-          p.mb.p-foot In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus pilisis accumsan turpis.
-          p.mb.p-foot Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis.
-          .center
-            a.a-foot info@sivocr.com
-            p.mb In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. I
         
-    //include footer.pug.jade
+    include footer.pug.jade
     
     script(src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js")
     script(src="js/index.js")

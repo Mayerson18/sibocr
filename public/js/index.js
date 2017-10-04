@@ -7,3 +7,12 @@ $(".nav-toggle").click(function() {
     $(".nav-menu").children().addClass("r");
   }
 });
+
+$('.owl-carousel').owlCarousel({
+  items: 1
+});
+
+$(".click").click(function(){
+  console.log("next")
+  $(".owl-next").click();
+})
