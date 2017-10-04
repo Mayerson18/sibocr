@@ -20,6 +20,7 @@ body{
 
 .pad{
   padding: 0px 5%;
+  margin-bottom: 10px;
 }
 
 .pad2{
@@ -126,7 +127,7 @@ body{
   background-image: linear-gradient(to right, #a61716, #dd1d1d);
   box-shadow: 0 3px 0 0 rgba(108, 108, 108, 0.5);
   text-align: center;
-  padding: 1em;
+  padding: 0.5em;
   color: $blanco;
   font-size: 1.5em;
   font-weight: bolder;
@@ -202,7 +203,9 @@ body{
 }
 
 .titulo-carta{
+  margin-top: 5px;
   font-size: em(30px);
+  line-height: 1.1em;
   font-weight: bold;
   letter-spacing: -0.3px;
   color: #c2140d;
@@ -210,6 +213,7 @@ body{
 
 .pt3em{
   padding-top: 6em;
+
 }
 
 .li{
