@@ -8,8 +8,15 @@ $(".nav-toggle").click(function() {
   }
 });
 
-$('.owl-carousel').owlCarousel({
+$('.carrusel').owlCarousel({
   items: 1
+});
+
+$('.carrusel2').owlCarousel({
+  items: 3,
+  margin: 50,
+  autoplay:true,
+  autoplayTimeout:5000
 });
 
 $(".click").click(function(){

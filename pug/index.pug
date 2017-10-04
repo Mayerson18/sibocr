@@ -7,7 +7,8 @@
 
 mixin article(img,title,content)
   .carta.pad
-    .flex
+    .flex.relative
+      .vacio
       img.img-carta(src="#{img}" alt="")
       .titulo-carta #{title}
     p.p-carta.mb #{p1}
@@ -45,16 +46,28 @@ include header.pug.jade
           .vacio
           iframe(style="width:100%" height="315" src="https://www.youtube.com/embed/XGSy3_Czz8k")
     section.cities.gray
-      .columns.pad
-        .column
+      .owl-carousel.pad.carrusel2
+        .item
           img(src="img/cities/1.png" alt="")
           .flex-center
             label.subtitulo Moscú
-        .column
+        .item
           img(src="img/cities/2.png" alt="")
           .flex-center
             label.subtitulo San Petersburgo
-        .column
+        .item
+          img(src="img/cities/3.png" alt="")
+          .flex-center
+            label.subtitulo Kaliningrado
+        .item
+          img(src="img/cities/1.png" alt="")
+          .flex-center
+            label.subtitulo Moscú
+        .item
+          img(src="img/cities/2.png" alt="")
+          .flex-center
+            label.subtitulo San Petersburgo
+        .item
           img(src="img/cities/3.png" alt="")
           .flex-center
             label.subtitulo Kaliningrado
@@ -68,7 +81,7 @@ include header.pug.jade
           p.small.mb * Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus. Nam tempus vel odio vitae aliquam. 
           .precios Ver Precios
         .column.incluye
-          .flex
+          .flex-cnter
             p.inclu.mb Incluye
           .columns.is-fluid
             
