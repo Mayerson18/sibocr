@@ -27,7 +27,8 @@ $('.carrusel2').owlCarousel({
        },
        1000:{
            items:3,
-           loop:true
+           loop:true,
+           dots: true
        }
    },
 });

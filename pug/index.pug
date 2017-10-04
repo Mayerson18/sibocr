@@ -20,6 +20,7 @@ mixin article(img,title,content)
         
 include header.pug.jade
   link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css")
+  link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css")
   body
     .banner
       .space-between.pad
@@ -44,9 +45,9 @@ include header.pug.jade
           .info.mt Nam dapibus nisl #[a.blanco info@sibocr.com] Aenean sollicitudin
         .column
           .vacio
-          iframe(style="width:100%" height="315" src="https://www.youtube.com/embed/XGSy3_Czz8k")
+          iframe(style="width:100%" height="315" src="https://www.youtube.com/embed/XGSy3_Czz8k?autoplay=1&controls=0")
     section.cities.gray
-      .owl-carousel.pad.carrusel2
+      .owl-carousel.pad.carrusel2.owl-theme
         .item
           img(src="img/cities/1.png" alt="")
           .flex-center
@@ -55,6 +56,10 @@ include header.pug.jade
           img(src="img/cities/2.png" alt="")
           .flex-center
             label.subtitulo San Petersburgo
+        .item
+          img(src="img/cities/3.png" alt="")
+          .flex-center
+            label.subtitulo Kaliningrado
         .item
           img(src="img/cities/3.png" alt="")
           .flex-center
