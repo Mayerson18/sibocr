@@ -1,0 +1,34 @@
+.layout2.contactenos#contactenos
+  .columns.m10.center.mv
+    .column
+      .columns.w-full
+        .column
+          img(src="img/atis-img.png",alt="ATIS",class="banner")
+        .address.center.column
+          p.mb-50.mov #[strong Adress:] 2500 NW 79th Ave Suite 177 Miami, FL 33122
+          p.mb-50.mov #[strong Telephone:] (786) 309 3391
+          p.mb-50.mov #[strong FAX:] (786) 309 3391
+          p.mb-50.mov #[strong EMAIL:] info@atisre.com
+          .prueba
+            a(href="#")
+              img(src="img/facebook.png",alt="ATIS")
+            a(href="#")
+              img(src="img/instagram.png",alt="ATIS")
+            a(href="#")
+              img(src="img/linked-in.png",alt="ATIS")
+      
+    .column
+      .box-contact.mb10
+        form(action="" method="POST")
+          legend Contact us 
+          //p.normal Have Questions? Let our specially trained experts help. Simply call or email  us to discuss how we can assist you with your reinsurance needs.
+          p.control
+            input(type="text" name="name" placeholder="Name" required )
+          p.control
+            input(type="text" name="company" required placeholder="Company")
+          p.control
+            input(type="text" name="email" required placeholder="Email")
+          p.control
+            textarea(name="mensaje" placeholder="Message" required)
+          p.control
+            button.button.boton Contact us 

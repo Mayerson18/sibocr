@@ -1,0 +1,38 @@
+@mixin  textos($font,$weight,$color,$line){
+  font-size: $font;
+  font-weight: $weight;
+  color: $color;
+  line-height: $line;
+}
+
+@function em($px){
+  @return ($px / 16px) * 1em;
+}
+
+@mixin arrow($img,$dir,$px){
+  float: $dir;
+  background-image: url($img)!important;
+  width: 52px;
+  height: 52px;
+  position: relative;
+  top: $px;
+}
+
+@mixin navs ($top,$url,$px){
+  top: $top!important;
+  background-image: url($url) !important;
+  width: $px;
+  background-repeat: no-repeat;
+}
+
+@mixin fondo ($height,$url,$align1,$align2,$color){
+  height: $height;
+  background-image: url($url);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content:$align1;
+  align-items:$align2;
+  color: $color;
+}

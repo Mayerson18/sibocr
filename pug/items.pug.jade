@@ -1,0 +1,15 @@
+- var item1 = {class:"fondo1",title:"Assurance, Transparency, Integrity, Service",content:p3}
+- var item2 = {class:"fondo2",title:"Making Reinsurance Less Complicated",content:p3}
+- var item3 = {class:"fondo3",title:"Flexible It`s always urgent",content:p3}
+- var item4 = {class:"fondo4",title:"Every client large or small, gets our best",content:p3}
+- var item4 = {class:"fondo4",title:"You don`t get reinsurance through us, you have ATIS Re Advisory. That makes all difference.",content:p3}
+- var items = [item1,item2,item3,item4]
+mixin items(className,title,content)
+  .item
+    div(class="#{className}")
+      .in-fondo
+        h2 #{title}
+        //p #{content}
+        
+each val in items
+  +items(val.class,val.title,val.content)

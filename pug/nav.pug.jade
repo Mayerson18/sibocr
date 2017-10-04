@@ -1,0 +1,33 @@
+img(src="img/logo.png",alt="Atis",class="img-logo")
+br
+br
+nav.nav
+  .nav-left
+    a.nav-item
+      
+  span.nav-toggle
+    each val in [1, 2, 3]
+      span
+  
+  .nav-right.nav-menu
+    a.nav-item(href="index.html") Home
+    //a.nav-item(href="index2.html") About Us
+    .dropdown.nav-item About Us
+      .dropdown-content 
+        a(href="index2.html")="Our Team"
+        a(href="index3.html")="Why to choose us"
+    //a.nav-item Product and Services
+    .dropdown.nav-item Product and Services
+      .dropdown-content 
+        a(href="index4.html#property")="Property "
+        a(href="index4.html#energy")="Energy"
+        a(href="index4.html#risk")="Financial Risk"
+        a(href="index4.html#engineering")="Engineering"
+        a(href="index4.html#marine")="Marine"
+        a(href="index4.html#lability")="Casualty"
+        a(href="index4.html#life")="Life"
+        a(href="index4.html#livestock")="Livestock"
+    a.nav-item(href="index3.html#contactenos") Contact Us
+    //a.nav-item.active(href="index3.html")  Help us to help you better
+    
+    

@@ -1,0 +1,75 @@
+//output:../public/index.html
+- var p1 = ""
+
+mixin article(img,title,content)
+  .column.center
+    img(src=img,class="ours-img")
+    h2.ours-title=title
+    p.ours-content=content
+        
+        
+include header.pug.jade
+  body
+    .banner
+      .space-between.pad
+        img(src="img/logo1.png" alt="")
+        img(src="img/logo2.png" alt="")
+      h1 Quedan  #[strong.red 22]  días para el Mundial
+    .post-banner #[strong.blanco Viaja] y acomparña nuestra #[strong.blanco Sele] en #[strong.blanco Rusia 2018]
+    section.planes
+      .columns
+        .column
+          p.p1
+          input.input(type="text" placeholde="Cual es tu nombre")
+          a.ver-planes Ver Planes
+          .info
+        .column 
+    section.cities
+      .columns
+        .column
+          img(src="img/cities/1.png" alt="")
+          label Moscú
+        .column
+          img(src="img/cities/2.png" alt="")
+          label San Petersburgo
+        .column
+          img(src="img/cities/3.png" alt="")
+          label Kaliningrado
+        .column 
+    section.steps
+      .columns
+        .column
+          img.balon(src="img/balon.png" alt="")
+          h2.sigue Sigue a Costa Rica en el Mundial
+          p as
+          p.small asdsa
+          .precios Ver Precios
+        .column
+          .columns.is-fluid
+            .column
+              img(src="img/cities/2.png" alt="")
+              label Voletos Aereos
+            .column
+              img(src="img/cities/2.png" alt="")
+              label Voletos Aereos
+            .column
+              img(src="img/cities/2.png" alt="")
+              label Voletos Aereos
+            .column
+              img(src="img/cities/2.png" alt="")
+              label Voletos Aereos
+          .columns.is-fluid
+            .column
+              img(src="img/cities/2.png" alt="")
+              label Voletos Aereos
+            .column
+              img(src="img/cities/2.png" alt="")
+              label Voletos Aereos
+            .column
+              img(src="img/cities/2.png" alt="")
+              label Voletos Aereos
+    
+    //include footer.pug.jade
+    
+    script(src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous")
+    script(src="js/index.js")

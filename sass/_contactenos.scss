@@ -1,0 +1,45 @@
+/*CONTACTENOS*/
+.contactenos{
+  padding-top: 20px;
+  margin: 0px!important;
+  background-color: #eaeaea;
+}
+
+.box-contact{
+  width: 80%;
+  height: em(490px);
+  border-radius: 10px;
+  background-color: $blanco;
+  margin-left: 10%;
+  padding: 0px 10%;
+}
+
+.boton{
+  background-color: #224767;
+  border-color: transparent;
+  color: $blanco;
+}
+
+.control{
+
+  margin-bottom: em(20px);
+
+  & > input{
+    height: 44px;
+  }
+  & > textarea{
+    height: 109px;
+  }
+  & > input,textarea{
+    padding-left: 1em;
+    border-radius: 7px;
+    border: solid 1px #cccccc;
+  }
+  & > *{
+    width: 100%;
+  }
+}
+
+legend{
+  @include textos(em(15px),normal,#1c1c1c,initial);
+}
