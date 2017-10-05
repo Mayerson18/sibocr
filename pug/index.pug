@@ -17,7 +17,6 @@ mixin article(img,title,content)
         li #[span.li] &nbsp;&nbsp; #{val}
     .precios Ver Precios
         
-        
 include header.pug.jade
   link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css")
   link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css")
@@ -32,16 +31,17 @@ include header.pug.jade
       .columns.banner2.pad2
         .column.is-6
           p.p1.mb Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum, neque sem pretium metus, quis mollis nisl nunc et massa. Vestibulum sed metus in lorem tristique .
-          .owl-carousel.carrusel
-            .item
-              input.input(type="text" placeholder="Cual es tu nombre")
-              a.ver-planes.click Ver Planes
-            .item
-              input.input(type="email" placeholder="Cual es tu email")
-              a.ver-planes.click Siguiente
-            .item
-              input.input(type="number" placeholder="Cual es tu telefono")
-              a.ver-planes.click Enviar
+          form.form
+            .owl-carousel.carrusel
+              .item
+                input.input(type="text" placeholder="Cual es tu nombre" name="name")
+                a.ver-planes.click Ver Planes
+              .item
+                input.input(type="email" placeholder="Cual es tu email" name="email")
+                a.ver-planes.click Siguiente
+              .item
+                input.input(type="number" placeholder="Cual es tu telefono" name="telefono")
+                a.ver-planes.click#enviar Enviar
           .info.mt Nam dapibus nisl #[a.blanco info@sibocr.com] Aenean sollicitudin
         .column
           .vacio
