@@ -1,17 +1,17 @@
 //output:../public/index.html
-- var p1 = "Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus. Nam tempus vel odio vitae aliquam. "
--var item1 = {img: "img/iglesia.png", title: "Partido Inaugural", content: ["coki1","coki2","coki3"]}
--var item2 = {img: "img/muneca.png", title: "Semifinales", content: ["coki1","coki2","coki3"]}
--var item3 = {img: "img/torres.png", title: "Final", content: ["coki1","coki2","coki3"]}
+- var p1 = "Si quieres cuanto antes tus boletos Mundial Rusia 2018 - Partido inaugural para no perderte este partido que todo indica será inolvidable, entonces contáctanos. podrás encontrar aquí, de forma fácil, rápida y segura los partidos mas importantes de este mundial. "
+-var item1 = {img: "img/iglesia.png", title: "Partido Inaugural", pv:p1 , content: ["coki1","coki2","coki3"]}
+-var item2 = {img: "img/muneca.png", title: "Octavos de Final", pv:p1 , content: ["coki1","coki2","coki3"]}
+-var item3 = {img: "img/torres.png", title: "Semi fina y Final",  pv:p1 , content: ["coki1","coki2","coki3"]}
 -var items = [item1,item2,item3]
 
-mixin article(img,title,content)
+mixin article(img,title,content,pv)
   .carta.pad
     .flex.relative
       .vacio
       img.img-carta(src="#{img}" alt="")
       .titulo-carta #{title}
-    p.p-carta.mb #{p1}
+    p.p-carta.mb #{pv}
     ul.mb
       each val in content
         li #[span.li] &nbsp;&nbsp; #{val}
@@ -31,7 +31,7 @@ include header.pug.jade
     section.planes.gray
       .columns.banner2.pad2
         .column.is-6
-          p.p1.mb Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum, neque sem pretium metus, quis mollis nisl nunc et massa. Vestibulum sed metus in lorem tristique .
+          p.p1.mb Sigue a la Sele, con nuestros paquetes con boletos de avión, hospedaje, entradas a los partidos de la sele, actividades, kit de viaje e impuestos incluidos. Viajar a Rusia en Junio 2018 para ver a la Sele en el Mundial es muy fácil, conoce nuestros paquetes, experiencias y paga en cuotas sin intereses.
           .owl-carousel.carrusel
             .item
               input.input(type="text" placeholder="Cual es tu nombre")
@@ -42,10 +42,11 @@ include header.pug.jade
             .item
               input.input(type="number" placeholder="Cual es tu telefono")
               a.ver-planes.click Enviar
-          .info.mt Nam dapibus nisl #[a.blanco info@sibocr.com] Aenean sollicitudin
+          .info.mt Para mas información escribe  #[a.blanco info@sibocr.com] 
         .column
           .vacio
-          iframe(style="width:100%" height="315" src="https://www.youtube.com/embed/XGSy3_Czz8k?autoplay=1&controls=0")
+          
+          iframe(style="width:100%" height="315" src="https://www.youtube.com/embed/7YI0pIusCEs?autoplay=1&controls=0")
     section.cities.gray
       .owl-carousel.pad.carrusel2.owl-theme
         .item
@@ -70,7 +71,7 @@ include header.pug.jade
           .flex
             img.balon(src="img/balon.png" alt="")
             h2.sigue.mb Sigue a Costa Rica en el Mundial
-          p.p2.mb Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus. Nam tempus vel odio vitae aliquam. 
+          p.p2.mb Acompaña a nuestra sele en la fase de grupos, Viaje redondo Costa Rica-Rusia-Costa Rica, Hospedaje en hoteles categoría turista por 5 noches, traslados aeropuerto-hotel hotel-estadio, Lo mejor de este Paquete al Mundial de Rusia 2018 es el plan de pagos. No te pierdas esta gran oportunidad. 
           p.small.mb * Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus. Nam tempus vel odio vitae aliquam. 
           .precios Ver Precios
         .column.incluye
@@ -113,7 +114,7 @@ include header.pug.jade
       .columns.pad
         each val in items
           .column
-            +article(val.img,val.title,val.content)
+            +article(val.img,val.title,val.content,val.pv)
           
         
     include footer.pug.jade
