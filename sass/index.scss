@@ -18,6 +18,10 @@ body{
   background-color: #e2e2e2;
 }
 
+.error{
+  color: #001f58;
+}
+
 .pad{
   padding: 0px 5%;
   margin-bottom: 10px;
@@ -125,6 +129,7 @@ body{
 
 
 .precios{
+  width: 100%;
   border-radius: 4px;
   background-image: linear-gradient(to right, #a61716, #dd1d1d);
   box-shadow: 0 3px 0 0 rgba(108, 108, 108, 0.5);

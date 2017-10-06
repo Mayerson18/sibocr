@@ -17,11 +17,13 @@ mixin article(img,title,content,pv)
     ul.mb
       each val in content
         li #[span.li] &nbsp;&nbsp; #{val}
-    .precios Ver Precios
+    a(href="#inicio" id="go")
+      .precios Ver Precios
         
 include header.pug.jade
   link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css")
   link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css")
+  link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css")
   body
     .banner
       .space-between.pad
@@ -30,7 +32,7 @@ include header.pug.jade
       h1 Quedan  #[strong.red 22]  días para el Mundial
     .post-banner #[strong.blanco Viaja] y acompaña nuestra #[strong.blanco Sele] en #[strong.blanco Rusia 2018]
     section.planes.gray
-      .columns.banner2.pad2
+      .columns.banner2.pad2#inicio
         .column.is-6
           p.p1.mb Sigue a la Sele, con nuestros paquetes con boletos de avión, hospedaje, entradas a los partidos de la sele, actividades, kit de viaje e impuestos incluidos. Viajar a Rusia en Junio 2018 para ver a la Sele en el Mundial es muy fácil, conoce nuestros paquetes, experiencias y paga en cuotas sin intereses.
           form.form
@@ -43,7 +45,7 @@ include header.pug.jade
                 a.ver-planes.click Siguiente
               .item
                 input.input#phone(type="number" placeholder="Cual es tu telefono" name="phone")
-                a.ver-planes.click#enviar Enviar
+                input.ver-planes.click#enviar(type="submit")
           .info.mt Para mas información escribe  #[a.blanco info@sibocr.com] 
         .column
           .vacio
@@ -104,7 +106,8 @@ include header.pug.jade
             h2.sigue.mb Sigue a Costa Rica en el Mundial
           p.p2.mb Acompaña a nuestra Seleccion Nacional de Futbol con nuestro paquete que incluye: boleto aéreo Costa Rica - Rusia- Costa Rica,Hospedaje,traslados,traductor ruso-español, entradas, impuestos áereos y mas !Viajar a Rusia en junio del 2018  es muy fácil, conoce nuestros paquetes y celebra en vivo los triunfos de nuestra querida Sele No te pierdas esta gran oportunidad!
           //p.small.mb * Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus. Nam tempus vel odio vitae aliquam. 
-          .precios Ver Precios
+          a(href="#inicio" id="go")
+            .precios Ver Precios
         .column.incluye
           .flex-cnter
             p.inclu.mb Incluye
@@ -152,4 +155,7 @@ include header.pug.jade
     
     script(src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js")
+    script( src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js")
+    script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js")
+    script(src="js/jquery.validate.min.js")
     script(src="js/index.js")

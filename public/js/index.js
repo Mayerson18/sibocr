@@ -1,12 +1,45 @@
-$(".nav-toggle").click(function() {
-  if($(".nav-menu").hasClass("is-active")){
-    $(".nav-menu").removeClass("is-active");
-    $(".nav-menu").children().removeClass("r");
-  }else{
-    $(".nav-menu").addClass("is-active");
-    $(".nav-menu").children().addClass("r");
+$(document).ready(function(){
+  $(".nav-toggle").click(function() {
+    if($(".nav-menu").hasClass("is-active")){
+      $(".nav-menu").removeClass("is-active");
+      $(".nav-menu").children().removeClass("r");
+    }else{
+      $(".nav-menu").addClass("is-active");
+      $(".nav-menu").children().addClass("r");
+    }
+  });
+
+  ///Firebase
+
+  var config = {
+    apiKey: "AIzaSyB3HZSn4xcQU4Q9lRWNz9LIh__bYexQM44",
+    authDomain: "sibocr-9c2d0.firebaseapp.com",
+    databaseURL: "https://sibocr-9c2d0.firebaseio.com",
+    projectId: "sibocr-9c2d0",
+    storageBucket: "sibocr-9c2d0.appspot.com",
+    messagingSenderId: "88744498646"
+  };
+  firebase.initializeApp(config);
+
+
+
+  function writeNewPost(name,email,cel) {
+    // A post entry.
+    var postData = {
+      nombre: name,
+      email: email,
+      telefono: cel
+    };
+    // Get a key for a new Post.
+    var newPostKey = firebase.database().ref().child('posts').push().key;
+    // Write the new post's data simultaneously in the posts list and the user's post list.
+    var updates = {};
+    updates['/posts/' + newPostKey] = postData;
+    return firebase.database().ref().update(updates);
   }
-});
+
+
+//////Fin FIrebase
 
 !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="4.0.0";
 analytics.load("1q9bolFheVqJpc7W06CHw0d9FWWNa3l3");
@@ -47,17 +80,65 @@ var fecha = new Date("2018-06-14 23:46:48 UTC");//La fecha destino del evento
 var	days = (fecha - now) / 1000 / 60 / 60 / 24;
 var daysRound = Math.floor(days);
 
-$(".red").text(daysRound);
+$(".red").text(daysRound)
+
+$('.form').validate({ // initialize the plugin
+       rules: {
+           name: {
+               required: true
+           },
+           email: {
+               required: true,
+               email: true
+           },
+           phone: {
+             required: true
+           }
+       },
+       messages: {
+         nombre: "Por favor especifica tu nombre",
+         email: {
+           required: "Necesitamos tu dirección de correo",
+           email: "debe ser name@domain.com"
+         },
+         phone: "Por favor especifica tu numero telefonico"
+       },
+       submitHandler: function (form) {
+         var form = $(form).serializeArray();
+         var nombre = form[0].value;
+         var email = form[1].value;
+         var telefono = form[2].value;
+         console.log(nombre)
+         console.log(telefono)
+         console.log(email)
+         analytics.identify(email, {
+           name: nombre,
+           phone : telefono,
+           email: email
+         });
+         if(nombre && telefono && email)
+           toastr.success('Mensaje Enviado')
+         writeNewPost(nombre,email,telefono)
+
+         return false;
+       }
+    });
 
 
-$("#enviar").click(function(){
-  console.log("Enviar");
-  var nombre = $("#name").val();
-  var telefono = $("#phone").val();
-  var email = $("#email").val();
-  analytics.identify(email, {
-    name: nombre,
-    phone : telefono,
-    email: email
-  });
-})
+    $( ".question" ).hover(
+      function() {
+        
+        $("#question").text($(this).text());
+        var texto = ($(this).data("text"));
+        var p = '';
+        for (var i = 0; i < texto.length; i++) {
+          p += '<p class="mb p-foot">'
+          p += texto[i];
+          p += '</p>';
+        }
+        $("#answer").html(p);
+      }
+    );
+
+
+});

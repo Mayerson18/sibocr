@@ -21,6 +21,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <body>
       <div class="banner">
         <div class="space-between pad"><img src="img/logo1.png" alt=""><img src="img/logo2.png" alt=""></div>
@@ -28,7 +29,7 @@
       </div>
       <div class="post-banner"><strong class="blanco">Viaja</strong> y acompaña nuestra <strong class="blanco">Sele</strong> en <strong class="blanco">Rusia 2018</strong></div>
       <section class="planes gray">
-        <div class="columns banner2 pad2">
+        <div id="inicio" class="columns banner2 pad2">
           <div class="column is-6">
             <p class="p1 mb">Sigue a la Sele, con nuestros paquetes con boletos de avión, hospedaje, entradas a los partidos de la sele, actividades, kit de viaje e impuestos incluidos. Viajar a Rusia en Junio 2018 para ver a la Sele en el Mundial es muy fácil, conoce nuestros paquetes, experiencias y paga en cuotas sin intereses.</p>
             <form class="form">
@@ -40,7 +41,8 @@
                   <input id="email" type="email" placeholder="Cual es tu email" name="email" class="input"><a class="ver-planes click">Siguiente</a>
                 </div>
                 <div class="item">
-                  <input id="phone" type="number" placeholder="Cual es tu telefono" name="phone" class="input"><a id="enviar" class="ver-planes click">Enviar</a>
+                  <input id="phone" type="number" placeholder="Cual es tu telefono" name="phone" class="input">
+                  <input id="enviar" type="submit" class="ver-planes click">
                 </div>
               </div>
             </form>
@@ -118,8 +120,8 @@
               <h2 class="sigue mb">Sigue a Costa Rica en el Mundial</h2>
             </div>
             <p class="p2 mb">Acompaña a nuestra Seleccion Nacional de Futbol con nuestro paquete que incluye: boleto aéreo Costa Rica - Rusia- Costa Rica,Hospedaje,traslados,traductor ruso-español, entradas, impuestos áereos y mas !Viajar a Rusia en junio del 2018  es muy fácil, conoce nuestros paquetes y celebra en vivo los triunfos de nuestra querida Sele No te pierdas esta gran oportunidad!</p>
-            <!--p.small.mb * Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus. Nam tempus vel odio vitae aliquam. -->
-            <div class="precios">Ver Precios</div>
+            <!--p.small.mb * Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus. Nam tempus vel odio vitae aliquam. --><a href="#inicio" id="go">
+              <div class="precios">Ver Precios</div></a>
           </div>
           <div class="column incluye">
             <div class="flex-cnter">
@@ -173,8 +175,8 @@
                 <li><span class="li"></span> &nbsp;&nbsp; Visita de la ciudad de Moscú</li>
                 <li><span class="li"></span> &nbsp;&nbsp; Visita al museo del Vodka</li>
                 <li><span class="li"></span> &nbsp;&nbsp; Entradas al Partido inagural CAT1</li>
-              </ul>
-              <div class="precios">Ver Precios</div>
+              </ul><a href="#inicio" id="go">
+                <div class="precios">Ver Precios</div></a>
             </div>
           </div>
           <div class="column">
@@ -188,8 +190,8 @@
                 <li><span class="li"></span> &nbsp;&nbsp; Visita de la ciudad de Moscú</li>
                 <li><span class="li"></span> &nbsp;&nbsp; Visita al museo del Vodka</li>
                 <li><span class="li"></span> &nbsp;&nbsp; Entradas al Partido #51 y #56 Semifinal CAT1</li>
-              </ul>
-              <div class="precios">Ver Precios</div>
+              </ul><a href="#inicio" id="go">
+                <div class="precios">Ver Precios</div></a>
             </div>
           </div>
           <div class="column">
@@ -203,8 +205,8 @@
                 <li><span class="li"></span> &nbsp;&nbsp; Visita de la ciudad de Moscú</li>
                 <li><span class="li"></span> &nbsp;&nbsp; Visita al museo del Vodka</li>
                 <li><span class="li"></span> &nbsp;&nbsp; Entradas al Partido #61 Semifinal CAT1</li>
-              </ul>
-              <div class="precios">Ver Precios</div>
+              </ul><a href="#inicio" id="go">
+                <div class="precios">Ver Precios</div></a>
             </div>
           </div>
         </div>
@@ -213,16 +215,18 @@
         <div class="columns pad">
           <div class="column">
             <h1 class="mb">Preguntas Frecuentes</h1>
-            <h2 class="mb">¿Que documentos necesito para viajar ?  </h2>
-            <h2 class="mb">¿Que categoría son los Hoteles donde nos hospedaremos en Rusia ?</h2>
-            <h2 class="mb">¿Cuando entregan los boletos de los juegos y de los vuelos aereos?</h2>
-            <h2 class="mb">¿Que pasa si reservo y después decido cancelar ?</h2>
-            <h2 class="mb">¿Que pasaría si no puedo pagar alguna mensualidad?</h2>
+            <h2 data-text="[&quot;dasdsadsa&quot;,&quot;sadsdadsadsasadsda&quot;]" class="mb question">¿Que documentos necesito para viajar ?  </h2>
+            <h2 data-text="[&quot;dasdsadsa&quot;,&quot;sadsdadsadsasadsda&quot;]" class="mb question">¿Que categoría son los Hoteles donde nos hospedaremos en Rusia ?</h2>
+            <h2 data-text="[&quot;dasdsadsa&quot;,&quot;sadsdadsadsasadsda&quot;]" class="mb question">¿Cuando entregan los boletos de los juegos y de los vuelos aereos?</h2>
+            <h2 data-text="[&quot;dasdsadsa&quot;,&quot;sadsdadsadsasadsda&quot;]" class="mb question">¿Que pasa si reservo y después decido cancelar ?</h2>
+            <h2 data-text="[&quot;dasdsadsa&quot;,&quot;sadsdadsadsasadsda&quot;]" class="mb question">¿Que pasaría si no puedo pagar alguna mensualidad?</h2>
           </div>
           <div class="column">
-            <h3 class="can mb">¿Puedo Pagar con Tarjeta de Credito?</h3>
-            <p class="mb p-foot">In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus pilisis accumsan turpis.</p>
-            <p class="mb p-foot">Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis.</p>
+            <h3 id="question" class="can mb">¿Puedo Pagar con Tarjeta de Credito?</h3>
+            <div id="answer">
+              <p class="mb p-foot">In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus pilisis accumsan turpis.</p>
+              <p class="mb p-foot">Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis.</p>
+            </div>
             <div class="center"><a class="a-foot">info@sivocr.com</a>
               <p class="mb">In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. I</p>
             </div>
@@ -231,6 +235,9 @@
       </footer>
       <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+      <script src="js/jquery.validate.min.js"></script>
       <script src="js/index.js"></script>
     </body>
   </head>
