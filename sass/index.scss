@@ -25,10 +25,12 @@ body{
 .pad{
   padding: 0px 5%;
   margin-bottom: 10px;
+  max-width: 1200px!important;
 }
 
 .pad2{
   padding: 2em 5%;
+  max-width: 1200px!important;
 }
 
 .center{
@@ -126,7 +128,6 @@ body{
   letter-spacing: -0.2px;
   color: #f1ede4;
 }
-
 
 .precios{
   width: 100%;
