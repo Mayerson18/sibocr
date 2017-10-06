@@ -61,6 +61,8 @@ body{
 .red{
   background-color: $blanco;
   color: $rojo;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .blanco{
@@ -183,16 +185,16 @@ body{
   border-radius: 24px;
 }
 
-.incluye-img{  height: 37px; width: 37px;}
+.incluye-img{  height: 51px; width: 37px;}
 .l-incluye{
-  font-size: em(14px);
+ font-size: em(16px);
  font-weight: bold;
  letter-spacing: -0.2px;
  text-align: center;
  color: #dd1d1d;
 }
 .l-incluye-des{
-  font-size: em(11px);
+  font-size: em(12px);
  letter-spacing: -0.2px;
  text-align: center;
  color: #9B9B9B;
@@ -218,6 +220,7 @@ body{
 
 .titulo-carta{
   margin-top: 5px;
+  margin-left: 20px;
   font-size: em(30px);
   line-height: 1.1em;
   font-weight: bold;
@@ -237,10 +240,12 @@ body{
   width: 30px;
   border-radius: 20px;
   padding-right: 1em;
+
 }
 
 li{
   color: $rojo;
+  font-size: 0.9em;
 }
 
 .foot{
