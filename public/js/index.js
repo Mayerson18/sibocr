@@ -44,6 +44,8 @@ $(document).ready(function(){
 !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="4.0.0";
 analytics.load("1q9bolFheVqJpc7W06CHw0d9FWWNa3l3");
 analytics.page();
+
+
 }}();
 
 $('.carrusel').owlCarousel({
@@ -76,9 +78,11 @@ $(".click").click(function(){
 })
 
 var now = new Date();
-var fecha = new Date("2018-06-14 23:46:48 UTC");//La fecha destino del evento
+var fecha = new Date("2018-06-14 23:46:48");//La fecha destino del evento
 var	days = (fecha - now) / 1000 / 60 / 60 / 24;
 var daysRound = Math.floor(days);
+
+console.log(fecha);
 
 $(".red").text(daysRound)
 
@@ -114,12 +118,14 @@ $('.form').validate({ // initialize the plugin
          analytics.identify(email, {
            name: nombre,
            phone : telefono,
-           email: email
+           email: email,
+           integrations: {
+             'All': false
+           }
          });
          if(nombre && telefono && email)
            toastr.success('Mensaje Enviado')
          writeNewPost(nombre,email,telefono)
-
          return false;
        }
     });
@@ -127,7 +133,7 @@ $('.form').validate({ // initialize the plugin
 
     $( ".question" ).hover(
       function() {
-        
+
         $("#question").text($(this).text());
         var texto = ($(this).data("text"));
         var p = '';
