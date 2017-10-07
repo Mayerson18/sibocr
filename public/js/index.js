@@ -163,5 +163,21 @@ $('.form').validate({ // initialize the plugin
       $('.input').val('');
     }
 
+    $("#name").keypress(function (e) {
+      var keyCode = e.keyCode || e.which;
+       if (keyCode === 13) {
+         e.preventDefault();
+         return false;
+       }
+    });
+
+    $("#email").keypress(function (e) {
+      var keyCode = e.keyCode || e.which;
+       if (keyCode === 13) {
+         e.preventDefault();
+         return false;
+       }
+    });
+
 
 });
