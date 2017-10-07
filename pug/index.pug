@@ -1,7 +1,7 @@
 //output:../public/index.html
-- var p1 = "Viaja al la Inauguracion de la Copa del Mundo Rusia 2018, no te puedes perder el primer partido que todo indica que será una experiencia inolvidable entonces contáctanos. podrás encontrar aquí, de forma fácil, rápida y segura los partidos mas importantes de este mundial."
-- var p2 = "Reserva cuanto antes este emocionante paquete que te permitira vivir la inolvidable experiencia de estar en los octavos de final ,hasta  podrás visitar visita al museo del Vodka y disfrutar de una degustacion. Chequea que mas incluye este fabuloso paquete"
-- var p3 = "Forma parte del selecto grupo de aficionados que podrá disfrutar los partidos mas importantes de la Copa Mundial, semi final y la final  de futbol Rusia 2018, Tours, tarjeta SIM, entradas y muchas cosas mas estan incluidas en nuestro paquete mas exclusivo."
+- var p1 = "Viaja a la Inauguración de la Copa del Mundo Rusia 2018, no te puedes perder el primer partido, que todo indica será una experiencia inolvidable. ¡Contáctanos! Y encuentra aquí de forma fácil, rápida y segura los partidos más importantes de este mundial."
+- var p2 = "Reserva cuanto antes este emocionante paquete que te permitirá vivir la inolvidable experiencia de estar en los octavos de final, también podrás visitar el museo del Vodka y disfrutar de una degustación. Chequea que más incluye este fabuloso paquete."
+- var p3 = "Forma parte del selecto grupo de aficionados que podrán disfrutar de los partidos más importantes de la Copa Mundial, la semifinal y final de fútbol Rusia 2018, Tours, tarjeta SIM, entradas y muchas cosas más están incluidas en nuestro paquete más exclusivo."
 -var item1 = {img: "img/iglesia.png", title: "Partido Inaugural", pv:p1 , content: ["Visita de la ciudad de Moscú","Visita al museo del Vodka","Entradas al Partido inagural ","Entradas CAT1"]}
 -var item2 = {img: "img/muneca.png", title: "Octavos de Final", pv:p2 , content: ["Visita de la ciudad de Moscú","Visita al museo del Vodka","Entradas al Partido #51 y #56 Semifinal ","Entradas CAT1"]}
 -var item3 = {img: "img/torres.png", title: "Semi fina y Final",  pv:p3 , content: ["Visita de la ciudad de Moscú","Visita al museo del Vodka","Entradas al Partido #61 Semifinal","Entradas CAT1"]}
@@ -30,14 +30,13 @@ include header.pug.jade
         .space-between.pad(style="width:100%;")
           img(src="img/logo1.png" alt="")
           img(src="img/logo2.png" alt="")
-      h1 Quedan  #[strong.red 22]  días para el Mundial
+      h1 Quedan  #[strong.red ]  días para el Mundial
     .post-banner #[strong.blanco Viaja] y acompaña nuestra #[strong.blanco Sele] en #[strong.blanco Rusia 2018]
     section.planes.gray
       .banner2.flex-center
         .columns.pad2#inicio
           .column.is-6
-            p.p1.mb Chequea nuestros paquetes, experiencias y paga en cómodas cuotas sin intereses. Nuestros paquetes incluyen, desde boletos de avión, hospedaje, entradas a sus partidos, actividades, kit de viaje e impuestos incluidos. 
-
+            p.p1.mb Chequea nuestros paquetes, y paga en cómodas cuotas sin intereses. Nuestros paquetes incluyen, boletos de avión, hospedaje, entradas a los partidos, actividades, kit de viaje e impuestos.
             form.form
               .owl-carousel.carrusel
                 .item
@@ -49,10 +48,10 @@ include header.pug.jade
                 .item
                   input.input#phone(type="number" placeholder="¿Cuál es tu teléfono?" name="phone")
                   input.ver-planes.click#enviar(type="submit")
-            .info.mt Para mas información escribe  #[a.blanco info@sibocr.com] 
+            .info.mt Para más información escribe  #[a.blanco info@sibocr.com] 
           .column
             .vacio
-            iframe(style="width:100%" height="315" src="https://www.youtube.com/embed/46ZPDvQnAas?autoplay=1&controls=0")
+            iframe(style="width:100%" height="315" src="https://www.youtube.com/embed/46ZPDvQnAas?autoplay=1&controls=1")
     section.cities.gray
       .flex-center
         .owl-carousel.pad.carrusel2.owl-theme
@@ -108,7 +107,7 @@ include header.pug.jade
             .flex
               img.balon(src="img/balon.png" alt="")
               h2.sigue.mb Sigue a Costa Rica en el Mundial
-            p.p2.mb Acompaña a nuestra Seleccion Nacional de Futbol con nuestro paquete que incluye: boleto aéreo Costa Rica - Rusia- Costa Rica,Hospedaje,traslados,traductor ruso-español, entradas, impuestos áereos y mas !Viajar a Rusia en junio del 2018  es muy fácil, conoce nuestros paquetes y celebra en vivo los triunfos de nuestra querida Sele No te pierdas esta gran oportunidad!
+            p.p2.mb Acompaña a nuestra Selección Nacional de Fútbol con nuestro paquete que incluye: Boleto aéreo Costa Rica - Rusia- Costa Rica, hospedaje, traslados, traductor (ruso-español), entradas, impuestos aéreos y más ¡Viajar a Rusia en junio del 2018 es muy fácil! Conoce nuestros paquetes y celebra en vivo los triunfos de nuestra querida Sele. ¡No te pierdas esta gran oportunidad!
             //p.small.mb * Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus. Nam tempus vel odio vitae aliquam. 
             a(href="#inicio" id="go")
               .precios Ver Precios
@@ -123,7 +122,7 @@ include header.pug.jade
               .column.flex-vertical
                 img.incluye-img(src="img/translados.png" alt="")
                 label.l-incluye Traslados
-                label.l-incluye-des Aeropuerto -Hotel - Aeropuerto
+                label.l-incluye-des Aeropuerto -Hotel- Aeropuerto
               .column.flex-vertical
                 img.incluye-img(src="img/alojamientos.png" alt="")
                 label.l-incluye Alojamientos
