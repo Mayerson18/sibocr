@@ -116,10 +116,11 @@ $('.form').validate({ // initialize the plugin
            phone : telefono,
            email: email
          });
-         if(nombre && telefono && email)
-           toastr.success('Mensaje Enviado')
-         writeNewPost(nombre,email,telefono)
-
+         if(nombre && telefono && email){
+           toastr.success('Mensaje Enviado');
+           Limpiar();
+         }
+         writeNewPost(nombre,email,telefono);
          return false;
        }
     });
@@ -127,7 +128,7 @@ $('.form').validate({ // initialize the plugin
 
     $( ".question" ).hover(
       function() {
-        
+
         $("#question").text($(this).text());
         var texto = ($(this).data("text"));
         var p = '';
@@ -139,6 +140,19 @@ $('.form').validate({ // initialize the plugin
         $("#answer").html(p);
       }
     );
+
+    $('#phone').keypress(function (e) {
+     var key = e.which;
+     if(key == 13)  // the enter key code
+      {
+        $('#enviar').click();
+        return false;
+      }
+    });
+
+    function Limpiar(){
+      $('.input').val('');
+    }
 
 
 });
