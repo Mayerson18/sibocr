@@ -49,7 +49,8 @@ analytics.page();
 }}();
 
 $('.carrusel').owlCarousel({
-  items: 1
+  items: 1,
+  responsiveClass:true
 });
 
 $('.carrusel2').owlCarousel({

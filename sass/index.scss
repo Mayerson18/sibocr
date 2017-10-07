@@ -321,3 +321,20 @@ li{
 }
 
 .relative{ position: relative; margin-bottom: 2em; }
+
+@media (max-width:768px){
+
+  .banner{
+    &>h1{
+      font-size: 1.75em;
+    }
+  }
+
+  .post-banner{
+    font-size: 1.5em;
+  }
+
+  .banner2{
+    display: block;
+  }
+}
