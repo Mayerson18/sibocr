@@ -116,14 +116,15 @@ $('.form').validate({ // initialize the plugin
          console.log(nombre)
          console.log(telefono)
          console.log(email)
+
          analytics.identify(email, {
-           name: nombre,
-           phone : telefono,
-           email: email,
-           integrations: {
-             'All': false
-           }
-         });
+          name: nombre,
+          firstName : nombre,
+          lastName : nombre,
+          phone : telefono,
+          email: email
+        });
+
 
          if(nombre && telefono && email){
            toastr.success('Mensaje Enviado');
