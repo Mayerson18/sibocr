@@ -49,7 +49,7 @@ body{
 }
 
 .banner{
-  height: 363px;
+  height: 263px;
   width: 100%;
   background-image: url(../img/banner.png);
   background-position: center;
@@ -147,8 +147,27 @@ body{
   cursor: pointer;
 }
 
-.mb{ margin-bottom: 1em; }
+.mb{ margin-bottom: 1em;
+}
 .mt{ margin-top: 1em; }
+
+.titulopreguntas{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.titulopreguntas2{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.panding2{
+  padding-right: 40px;
+}
+
+.euro{
+  margin-bottom: 30px !important;
+}
 
 .subtitulo{
   text-align: center;
@@ -173,7 +192,7 @@ body{
 }
 
 .p2{
-  font-size: em(20px);
+  font-size: em(17px);
   letter-spacing: -0.2px;
   color: #6f6f6f;
 }
