@@ -2,9 +2,9 @@
 - var p1 = "Viaja al la Inauguracion de la Copa del Mundo Rusia 2018, no te puedes perder el primer partido que todo indica que será una experiencia inolvidable entonces contáctanos. podrás encontrar aquí, de forma fácil, rápida y segura los partidos mas importantes de este mundial."
 - var p2 = "Reserva cuanto antes este emocionante paquete que te permitira vivir la inolvidable experiencia de estar en los octavos de final ,hasta  podrás visitar visita al museo del Vodka y disfrutar de una degustacion. Chequea que mas incluye este fabuloso paquete"
 - var p3 = "Forma parte del selecto grupo de aficionados que podrá disfrutar los partidos mas importantes de la Copa Mundial, semi final y la final  de futbol Rusia 2018, Tours, tarjeta SIM, entradas y muchas cosas mas estan incluidas en nuestro paquete mas exclusivo."
--var item1 = {img: "img/iglesia.png", title: "Partido Inaugural", pv:p1 , content: ["Visita de la ciudad de Moscú","Visita al museo del Vodka","Entradas al Partido inagural CAT1"]}
--var item2 = {img: "img/muneca.png", title: "Octavos de Final", pv:p2 , content: ["Visita de la ciudad de Moscú","Visita al museo del Vodka","Entradas al Partido #51 y #56 Semifinal CAT1"]}
--var item3 = {img: "img/torres.png", title: "Semi fina y Final",  pv:p3 , content: ["Visita de la ciudad de Moscú","Visita al museo del Vodka","Entradas al Partido #61 Semifinal CAT1"]}
+-var item1 = {img: "img/iglesia.png", title: "Partido Inaugural", pv:p1 , content: ["Visita de la ciudad de Moscú","Visita al museo del Vodka","Entradas al Partido inagural ","Entradas CAT1"]}
+-var item2 = {img: "img/muneca.png", title: "Octavos de Final", pv:p2 , content: ["Visita de la ciudad de Moscú","Visita al museo del Vodka","Entradas al Partido #51 y #56 Semifinal ","Entradas CAT1"]}
+-var item3 = {img: "img/torres.png", title: "Semi fina y Final",  pv:p3 , content: ["Visita de la ciudad de Moscú","Visita al museo del Vodka","Entradas al Partido #61 Semifinal","Entradas CAT1"]}
 -var items = [item1,item2,item3]
 
 mixin article(img,title,content,pv)
@@ -36,7 +36,8 @@ include header.pug.jade
       .banner2.flex-center
         .columns.pad2#inicio
           .column.is-6
-            p.p1.mb Sigue a la Sele, con nuestros paquetes con boletos de avión, hospedaje, entradas a los partidos de la sele, actividades, kit de viaje e impuestos incluidos. Viajar a Rusia en Junio 2018 para ver a la Sele en el Mundial es muy fácil, conoce nuestros paquetes, experiencias y paga en cuotas sin intereses.
+            p.p1.mb Chequea nuestros paquetes, experiencias y paga en cómodas cuotas sin intereses. Nuestros paquetes incluyen, desde boletos de avión, hospedaje, entradas a sus partidos, actividades, kit de viaje e impuestos incluidos. 
+
             form.form
               .owl-carousel.carrusel
                 .item
@@ -103,7 +104,7 @@ include header.pug.jade
     section.steps.gray
       .flex-center
         .columns.pad
-          .column
+          .column.panding2
             .flex
               img.balon(src="img/balon.png" alt="")
               h2.sigue.mb Sigue a Costa Rica en el Mundial
@@ -118,10 +119,10 @@ include header.pug.jade
               
               .column.flex-vertical
                 img.incluye-img(src="img/voletos.png" alt="")
-                label.l-incluye Voletos Aereos
+                label.l-incluye Boletos aéreos 
               .column.flex-vertical
                 img.incluye-img(src="img/translados.png" alt="")
-                label.l-incluye Translados
+                label.l-incluye Traslados
                 label.l-incluye-des Aeropuerto -Hotel - Aeropuerto
               .column.flex-vertical
                 img.incluye-img(src="img/alojamientos.png" alt="")
@@ -142,7 +143,7 @@ include header.pug.jade
                 label.l-incluye-des de 16 MB pre pagada durante su estadia en Rusia
               .column.flex-vertical
                 img.incluye-img(src="img/estadio.png" alt="")
-                label.l-incluye Entrada al estadium
+                label.l-incluye Entrada al estadio
                 label.l-incluye-des entradas al partido inagural y traslado con guia al Estadio
               .column
                 
